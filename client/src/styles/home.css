@@ -16,7 +16,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* --- CRITICAL FIX FOR HOME SCROLLING --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto !important; /* Forces vertical scrolling back on */
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    height: auto !important; /* Allows body to grow with content */
+    width: 100%;
+}
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-dark);
@@ -174,7 +182,6 @@ ul {
   position: relative;
     border-radius: 20px;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     height: 600px;
