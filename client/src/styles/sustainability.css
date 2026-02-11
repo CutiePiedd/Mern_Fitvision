@@ -1,0 +1,171 @@
+/* Container for the specific page content */
+.sustain-page-wrapper {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f2f7 0%, #ffffff 20%);
+    background-attachment: scroll; /* Forces background to move with text */
+    color: #333;
+    line-height: 1.6;
+    padding-top: 20px;
+    /* Ensure it covers the whole page but scrolls */
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container-sustain {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Headers */
+.sustain-header {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 2px dashed rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    
+}
+
+.sustain-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a3b3b;
+    margin-bottom: 10px;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* SDG Badges */
+.sdg-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.sdg-badge {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.sdg-12 { background-color: #bf8b2e; } /* Mustard/Gold */
+.sdg-9 { background-color: #f36e21; }  /* Orange */
+
+.sdg-number { font-size: 1.5rem; font-weight: 900; }
+.sdg-label { font-size: 0.6rem; text-transform: uppercase; text-align: center; line-height: 1.2; }
+
+/* Layouts */
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.split-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content { flex: 1; }
+.image-content { 
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    position: relative; 
+}
+
+/* Polaroid & Tape */
+.polaroid {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    position: relative;
+    max-width: 300px;
+}
+
+.polaroid.right-tilt { transform: rotate(2deg); }
+
+.tape {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-left: 1px dashed rgba(0,0,0,0.1);
+    border-right: 1px dashed rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+    border: 8px solid #333;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 260px;
+    height: 500px;
+    background: #eef;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.phone-inner {
+    width: 100%;
+    height: 100%;
+    background: #d4eaf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Footer inside the content */
+.sustain-footer-inner {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 2px dashed rgba(0,0,0,0.1);
+}
+
+/* The Button You Wanted */
+.btn-learn-more {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-learn-more:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .split-layout, .split-layout.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sustain-header h1 { font-size: 2rem; }
+    .polaroid { margin: 0 auto; }
+}
