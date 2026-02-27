@@ -1,0 +1,340 @@
+/* --- PAGE BACKGROUND & WRAPPER --- */
+.contact-page-wrapper {
+  /* Soft blue background aiming for the technical/blueprint feel */
+  background: radial-gradient(circle at 50% 0%, #e0f2fe 0%, #f0f9ff 40%, #ffffff 100%);
+  font-family: 'Inter', sans-serif;
+  color: #edf0f4;
+  overflow-x: hidden;
+}
+
+/* --- HERO SECTION --- */
+.contact-hero {
+  text-align: center;
+  /* Dadagdagan din natin ang padding dito para pantay sa content sa baba */
+  padding: 80px 20px 50px; 
+  max-width: 1000px;      /* Mas maliit nang konti para focus ang text */
+  margin: 0 auto;         /* Center align */
+}
+.hero-content h1 {
+  font-size: 3.5rem; /* Large title like reference */
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-hero-primary {
+  background-color: #7ca5f8; /* Soft blue from reference */
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(124, 165, 248, 0.4);
+  transition: transform 0.2s;
+}
+
+.btn-hero-outline {
+  background-color: transparent;
+  color: #64748b;
+  border: 2px solid #cbd5e1;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-hero-primary:hover { transform: translateY(-2px); }
+.btn-hero-outline:hover { border-color: #7ca5f8; color: #7ca5f8; }
+
+/* --- MAIN CONTAINER (Controls Width & Spacing) --- */
+.main-content-container {
+  max-width: 1200px;      /* Ito ang limit ng lapad para di sumabog sa wide screen */
+  margin: 0 auto;         /* Ito ang nag-ce-center sa gitna */
+  padding: 150px 100px 100px;  /* 80px sa Left/Right para malaki ang space */
+  box-sizing: border-box; /* Sinisigurado na kasama ang padding sa sukat */
+}
+/* --- MIDDLE GRID SECTION --- */
+.middle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50-50 split */
+  gap: 60px; /* Generous gap between columns */
+  margin-bottom: 80px;
+}
+
+.column-header {
+  margin-bottom: 25px;
+}
+
+.column-header h2 {
+  font-size: 1.5rem;
+  color: #334155;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.column-header p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* --- DARK GLASS CARD (LEFT) --- */
+.glass-card {
+  background: radial-gradient(circle at 50% 0%, #e0f2fe 0%, #f0f9ff 40%, #ffffff 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* White glassy border */
+  border-radius: 20px;
+  padding: 40px;
+  color: rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle glow effect inside the card */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.glass-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.glass-header p {
+  font-size: 0.9rem;
+  color: #161616;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* Form Inputs */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.glass-form input,
+.glass-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05); /* Very transparent */
+  border: 1px solid rgba(27, 26, 26, 0.4); /* Visible white border */
+  border-radius: 10px;
+  padding: 15px 15px 15px 50px; /* Padding for icon */
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.glass-form input::placeholder,
+.glass-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.glass-form input:focus, 
+.glass-form textarea:focus {
+  background: rgba(148, 149, 181, 0.15);
+  border-color: #050d38;
+}
+
+/* Icons inside inputs */
+.icon-box {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.textarea-wrapper .icon-box {
+  top: 20px;
+  transform: none;
+}
+
+.glass-submit-btn {
+  background: #7ca5f8;
+  color: white;
+  width: 150px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.glass-submit-btn:hover {
+  background: #0b378e;
+}
+
+/* --- MAP CONTAINER (RIGHT) --- */
+.map-container {
+  height: 500px; /* Taller map to match form height */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Map Overlay Card */
+.map-overlay-card {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 10;
+  max-width: 220px;
+}
+
+.map-overlay-card strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.map-overlay-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.map-overlay-card a {
+  font-size: 0.75rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- BOTTOM SECTION --- */
+.bottom-section {
+  margin-top: 80px;
+}
+
+.section-title-center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-center h2 {
+  font-size: 1.8rem;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.section-title-center p {
+  color: #94a3b8;
+}
+
+.info-cards-row {
+  display: flex;
+  gap: 30px;
+}
+
+.info-white-card {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03); /* Very soft shadow */
+  border: 1px solid #f1f5f9;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-icon { background-color: #dbeafe; color: #3b82f6; }
+.chat-icon { background-color: #dbeafe; color: #3b82f6; }
+
+.card-content h3 {
+  font-size: 1rem;
+  color: #e0e2e6;
+  margin-bottom: 5px;
+}
+
+.large-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.small-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.rating-pill {
+  background: #fffbeb;
+  color: #d97706;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #fef3c7;
+}
+
+/* --- RESPONSIVE --- */
+/* Kapag maliit ang screen (Tablet/Mobile), bawasan ang spacing para di masikip */
+@media (max-width: 1024px) {
+  .main-content-container {
+    padding: 0 40px 80px; /* Bawasan to 40px pag tablet/maliit na laptop */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content-container {
+    padding: 0 20px 60px; /* 20px lang pag mobile para maximize ang space */
+  }
+  
+  .middle-grid {
+    grid-template-columns: 1fr; /* Stack na sila pag mobile */
+    gap: 40px;
+  }
+
+  .contact-hero {
+    padding: 60px 20px 40px;
+  }
+}

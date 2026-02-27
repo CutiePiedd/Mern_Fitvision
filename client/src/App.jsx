@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import SustainabilityPage from './pages/SustainabilityPage';
 import SignUp from './pages/SignUp'; // <--- Import the new page
 import SignIn from "./pages/Signin"; // <--- IMPORT SIGN IN
-
+import Aboutus from "./pages/aboutus";
+import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
@@ -18,6 +19,8 @@ function App() {
         {/* When URL is "/signup", show SignUp (Header will disappear, which is correct for this design) */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

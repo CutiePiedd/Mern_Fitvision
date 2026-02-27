@@ -11,7 +11,7 @@ const Header = () => {
                 
                 <div className="nav-links">
                     <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
+                    <Link to="/aboutus">About</Link>
                     <Link to="/contact">Contact</Link>
                     
                     {/* The Sign Up Button */}
